@@ -1,9 +1,18 @@
 body, html {
   width: 100%;
   margin: 0;
-  background-color: black;
+  
 }
 
+html{
+  background: black;
+}
+#canvas {
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
 
 .whole {
     display: flex;
@@ -42,7 +51,6 @@ body, html {
     justify-content: center;
     margin: auto;
     flex-wrap:wrap;
-    padding-top:
     
 }
 
