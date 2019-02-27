@@ -15,20 +15,31 @@ function loadDoc(filename) {
     
   }
 
-  function asdf(filename) {
+    function asdf(filename) {
+    if(filename == window.location.pathname.split("/").pop()){
+
+    }
+    else {
     push("./"+filename);
     loadDoc("./"+filename);
-    
+    }
   }
 
+  
 
-  window.onpopstate = function(event) {
+
+
+
+  window.onpopstate = function(e) {
+  
     var path = window.location.pathname;
     var page = path.split("/").pop();
-    loadDoc(page);
-    if(e.target != e.currentTarget){
-      e.preventDefault();
-      loadDoc(filename)
-		}
-      e.stopPropagation();
-	  }
+   
+
+      if (page == 'index.html') {
+        document.getElementById("qw").innerHTML = "";
+      } else {
+        loadDoc(page);
+      }
+    }
+
